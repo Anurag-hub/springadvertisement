@@ -1,5 +1,6 @@
 package com.firstadvertisement.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +13,7 @@ import com.firstadvertisement.services.AdvertisementService;
 @RestController
 @RequestMapping("/advertise")
 public class AdvertisementController {
-	
+	@Autowired
 	private AdvertisementService advertisementservice;
 
 	@RequestMapping(value="/newadvertisement",method=RequestMethod.POST)
